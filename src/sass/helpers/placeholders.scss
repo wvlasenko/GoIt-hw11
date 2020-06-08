@@ -1,0 +1,17 @@
+%header-nav-hover-after {
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 200ms linear;
+}
+
+%header-nav-after {
+  content: '';
+  display: block;
+  background-color: #fce38a;
+  width: auto;
+  height: 3px;
+  margin: auto;
+  margin-top: 12px;
+  opacity: 0;
+  visibility: hidden;
+}

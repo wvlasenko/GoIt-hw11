@@ -21,9 +21,7 @@
 
   &__title {
     font-family: $main-font;
-    font-size: 150px;
-    font-weight: 700;
-    line-height: 0.933;
+    @include font-arguments(150px, 700, 0.93);
     text-transform: uppercase;
     width: 840px;
     margin: 0 auto;
@@ -71,15 +69,15 @@
     margin-right: 56px;
   }
   &__link {
-    font-size: 14px;
-    font-weight: 400;
+    @include font-arguments(14px, 400);
     color: $main-color;
     text-transform: uppercase;
-  }
-  &__link:hover::after {
-    opacity: 1;
-    visibility: visible;
-    transition: opacity 200ms linear;
+    &:hover::after {
+      @extend %header-nav-hover-after;
+    }
+    &::after {
+      @extend %header-nav-after;
+    }
   }
 }
 .navigation-btn {
@@ -87,9 +85,10 @@
     fill: $main-color;
   }
   &:hover::after {
-    opacity: 1;
-    visibility: visible;
-    transition: opacity 200ms linear;
+    @extend %header-nav-hover-after;
+  }
+  &::after {
+    @extend %header-nav-after;
   }
 }
 .navigation-btn-list {
@@ -99,28 +98,14 @@
     margin-right: 30px;
   }
 }
-.navigation-list__link::after,
-.navigation-btn::after {
-  content: '';
-  display: block;
-  background-color: #fce38a;
-  width: auto;
-  height: 3px;
-  margin: auto;
-  margin-top: 12px;
-  opacity: 0;
-  visibility: hidden;
-}
 
 .header-logo__link {
-  font-size: 30px;
-  font-weight: 700;
+  @include font-arguments(30px, 700);
   color: $main-color;
 }
 
 .description {
   font-family: $title-description-font;
-  font-size: 72px;
-  font-weight: 400;
+  @include font-arguments(72px, 400);
   margin-bottom: 36px;
 }

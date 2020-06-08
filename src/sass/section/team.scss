@@ -31,7 +31,7 @@
   }
   &__name {
     font-family: $main-font;
-    font-size: 14px;
+    @include font-arguments(14px);
     color: #333333;
     text-transform: uppercase;
     text-align: center;
@@ -39,12 +39,11 @@
     margin-bottom: 4px;
   }
   &__position {
+    @include font-arguments(15px, 400, 24px);
     font-style: $secondary-font;
     font-style: italic;
     text-align: center;
     color: #999999;
-    font-weight: 400;
-    line-height: 24px;
   }
   &__list-item:hover {
     .overlay {
@@ -52,8 +51,6 @@
       visibility: visible;
       box-shadow: rgb(149, 225, 211) 10px 10px;
     }
-  }
-  &__list-item:hover {
     .team-member__list-wrapper {
       transform: translate(-10px, -10px);
     }
