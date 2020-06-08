@@ -1,13 +1,5 @@
 .header {
   background-image: linear-gradient(
-      linear,
-      left top,
-      left bottom,
-      from(rgba(243, 129, 129, 0.9)),
-      to(rgba(252, 227, 138, 0.9))
-    ),
-    url(../images/Header-bg.jpg);
-  background-image: linear-gradient(
       rgba(243, 129, 129, 0.9),
       rgba(252, 227, 138, 0.9)
     ),
@@ -18,7 +10,6 @@
   color: $main-color;
   padding-bottom: 226px;
   padding-top: 24px;
-
   &__title {
     font-family: $main-font;
     @include font-arguments(150px, 700, 0.93);

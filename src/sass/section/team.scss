@@ -40,7 +40,7 @@
   }
   &__position {
     @include font-arguments(15px, 400, 24px);
-    font-style: $secondary-font;
+    font-family: $secondary-font;
     font-style: italic;
     text-align: center;
     color: #999999;
